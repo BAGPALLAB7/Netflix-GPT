@@ -1,3 +1,5 @@
+//added to git ignore
+
 export const API_OPTION = {
   method: "GET",
   headers: {
