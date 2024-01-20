@@ -24,7 +24,7 @@ const VideoComponent = ({ movieId }) => {
       <iframe
         className="w-screen aspect-video bg-black mb-40"
         
-        src={YOUTUBE_URL + videoKey+"?autoplay=1&mute=1&showinfo=0&controls=0&loop=1&playlist="+videoKey}
+        src={YOUTUBE_URL + videoKey+"?autoplay=1&mute=1&showinfo=0&controls=0&loop=1&modestranding=1&playlist="+videoKey}
         
         allow="autoplay; fullscreen;"
       ></iframe>

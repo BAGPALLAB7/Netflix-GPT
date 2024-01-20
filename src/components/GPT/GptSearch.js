@@ -24,9 +24,9 @@ const GptSearch = () => {
   const handleGptSearch = async () => {
     console.log(searchText.current.value);
     const GPTQuery =
-      "act as a movie recommendation system and suggest some movies for the query: " +
+      "Act as a movie recommendation system and suggest some movie name for the query: " +
       searchText.current.value +
-      ". suggest me only five movie full original name and give me the movie names with comma separated. Please give me the output in this format like the example given : Don,3 Idiots,Gadar,Sholay,Tare Zameen Par";
+      ". Suggest me only name for five movie full name and give me the movie names with comma separated. Please give me the output in this format like the example given : Don,3 Idiots,Gadar,Sholay,Tare Zameen Par";
 
     const gptResultes = await openApi.chat.completions.create({
       messages: [{ role: "user", content: GPTQuery }],
