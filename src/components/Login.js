@@ -36,14 +36,14 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          console.log("uer created in firebase database : ", user);
+          //console.log("uer created in firebase database : ", user);
           updateProfile(auth.currentUser, {
             displayName: name.current.value,
           })
             .then(() => {
               // Profile updated!
               
-                console.log("update profile successful");
+                //console.log("update profile successful");
               
               // ...
             })
@@ -69,7 +69,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           
-          console.log("login user: -", user);
+          //console.log("login user: -", user);
           
           // ...
         })
@@ -90,18 +90,18 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute">
+      <div className="absolute -z-10 md:h-full md:w-full w-screen h-full">
         <img
-          className=""
+          className="w-full h-full object-cover"
           src={BG_IMG}
           alt="background"
         />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute bg-opacity-80 bg-black rounded-md w-4/12 my-24 h-5/6 mx-auto right-0 left-0 text-white p-10 flex flex-col"
+        className="w-5/6 my-28 absolute bg-opacity-80 bg-black rounded-md md:w-4/12 md:my-24 md:h-5/6 mx-auto right-0 left-0 text-white p-10 flex flex-col"
       >
-        <h1 className=" mx-auto text-3xl my-4 w-10/12">
+        <h1 className=" mx-auto text-xl md:text-3xl my-4 w-10/12">
           {isSignIn ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignIn && (
@@ -110,7 +110,7 @@ const Login = () => {
             type="text"
             name="name"
             placeholder="Full Name"
-            className="p-4 mx-auto my-2 w-10/12 bg-gray-700 rounded-md "
+            className="p-2 md:p-4 mx-auto my-2 w-11/12 md:w-10/12 bg-gray-700 rounded-md "
           />
         )}
 
@@ -119,33 +119,33 @@ const Login = () => {
           type="text"
           name="email"
           placeholder="Email address"
-          className="p-4 mx-auto my-2 w-10/12 bg-gray-700 rounded-md "
+          className="p-2 md:p-4 mx-auto my-2 w-11/12 md:w-10/12 bg-gray-700 rounded-md "
         />
         <input
           ref={password}
           type="password"
           name="password"
           placeholder="Password"
-          className="p-4 mx-auto my-2 w-10/12 bg-gray-700 rounded-md "
+          className="p-2 md:p-4 mx-auto my-2 w-11/12 md:w-10/12 bg-gray-700 rounded-md "
         />
         {errorMessage && (
-          <p className="text-red-700 text-lg w-10/12 mx-auto">{errorMessage}</p>
+          <p className="text-red-700 text-lg w-11/12 md:w-10/12 mx-auto">{errorMessage}</p>
         )}
         <button
-          className="p-4 mt-8 mx-auto bg-red-500 w-10/12 rounded-md "
+          className="p-2 md:p-4 mt-8 mx-auto bg-red-500 w-11/12 md:w-10/12 rounded-md text-sm md:text-lg"
           onClick={handleButtonClick}
         >
           {isSignIn ? "Sign In" : "Sign Up"}
         </button>
         {isSignIn ? (
-          <p className="text-gray-400 w-10/12 mx-auto py-32">
+          <p className="text-gray-400 w-10/12 mx-auto py-10 md:py-24 text-sm md:text-lg">
             New to Netflix?{" "}
             <span className="text-white cursor-pointer" onClick={toggleSignUp}>
               Sign up now.
             </span>
           </p>
         ) : (
-          <p className="text-gray-400 w-10/12 mx-auto py-32">
+          <p className="text-gray-400 w-10/12 mx-auto py-10 md:py-24 text-sm md:text-lg">
             Already a user?{" "}
             <span className="text-white cursor-pointer" onClick={toggleSignUp}>
               Sign In.

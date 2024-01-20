@@ -2,3 +2,4 @@ node_modules/
 ./build
 */constaints.js
 */firebase.js
+*/.env

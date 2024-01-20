@@ -8,7 +8,7 @@ const usePopularMovie = () =>{
   const fetchMovie = async () =>{
     const jsonData = await fetch('https://api.themoviedb.org/3/movie/popular',API_OPTION)
     const movieData =  await jsonData.json();
-    console.log("popular movie list",movieData);
+    //console.log("popular movie list",movieData);
     dispatch(addPopularMovie((movieData.results)));
   }
   useEffect(()=>{

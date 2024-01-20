@@ -1,22 +1,21 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import VideoComponent from './VideoComponent';
-import ShowTitle from './ShowTitle';
+import React from "react";
+import { useSelector } from "react-redux";
+import VideoComponent from "./VideoComponent";
+import ShowTitle from "./ShowTitle";
 
 const MainContainer = () => {
-    const movie = useSelector((store) => store.movies?.nowPlaying);
-    if (!movie) {
-        return
-    }
-    const firstMovie = movie[0];
-    const {id, title, overview} = firstMovie;
+  const movie = useSelector((store) => store.movies?.nowPlaying);
+  if (!movie) {
+    return;
+  }
+  const firstMovie = movie[0];
+  const { id, title, overview } = firstMovie;
   return (
-    <div>
-
-    <VideoComponent movieId={id}/>
-    <ShowTitle title={title} overview={overview}/>
+    <div className="">
+      <VideoComponent movieId={id} />
+      <ShowTitle title={title} overview={overview} />
     </div>
-  )
-}
+  );
+};
 
-export default MainContainer
+export default MainContainer;

@@ -6,4 +6,4 @@ const ErrorRoute = () => {
   )
 }
 
-export default ErrorRoute
+export default ErrorRoute;
