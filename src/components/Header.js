@@ -11,6 +11,7 @@ import { changeLang } from "../utils/store/languageSlice";
 import { removeAllMovies } from "../utils/store/movieSlice";
 import { removeGPTResults } from "../utils/store/gptSlice";
 import { removeLanguage } from "../utils/store/languageSlice";
+import logo from '.././images/movie__1_-removebg-preview.png'
 
 
 const Header = () => {
@@ -72,8 +73,9 @@ const Header = () => {
     <>
       <div className="absolute bg-gradient-to-b from-black px-8 py-2 flex justify-center md:justify-between w-full  items-center z-60">
         <img
-          className="h-24 md:w-48 z-50"
-          src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+          className="h-52 md:w-72 z-50 m-[-55px] md:m-[-32px]  "
+          src={logo}
+          //src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
           alt="logo"
         />
       </div>
